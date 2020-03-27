@@ -1,8 +1,8 @@
 const express = require('express');
 
-const app = express();
+const routes = express.Router();
 
-app.post('/users', (request, response) => {
+routes.post('/users', (request, response) => {
     const body = request.body;
 
     console.log(body);
@@ -12,5 +12,4 @@ app.post('/users', (request, response) => {
         aluno: 'Nito da Costa',
     });    
 });
-
-app.listen(3333);
+module.exports = routes;
