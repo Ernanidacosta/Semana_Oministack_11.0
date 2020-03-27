@@ -2,14 +2,14 @@ const express = require('express');
 
 const app = express();
 
-app.get('/users', (request, response) => {
-    const params = request.query;
+app.post('/users', (request, response) => {
+    const body = request.body;
 
-    console.log(params);
-    
+    console.log(body);
+
     return response.json({
         evento: 'Semana Oministack 11',
-        aluno: 'Ernani da Costa',
+        aluno: 'Nito da Costa',
     });    
 });
 
